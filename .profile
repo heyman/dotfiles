@@ -1,6 +1,9 @@
 # fix pretty ls
 alias ls="ls -Gl"
 
+# path
+export PATH=$PATH:/usr/local/Cellar/python/2.7.1/bin
+
 # git bash completion
 source ~/misc/git-completion.bash
 
