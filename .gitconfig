@@ -1,0 +1,9 @@
+[user]
+	name = Jonatan Heyman
+	email = jonatan@heyman.info
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = ~/.gitignore
