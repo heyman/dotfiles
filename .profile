@@ -28,3 +28,9 @@ export GIT_EDITOR=emacs
 # fix problems with setuptools, and other python stuff, together with OSX terminal
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# python commands (for tripbirds makefiles)
+export PYTHON=python
+
+# django manage command shortcut
+alias pm="python manage.py"
