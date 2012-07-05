@@ -34,3 +34,6 @@ export PYTHON=python
 
 # django manage command shortcut
 alias pm="python manage.py"
+
+# set up better python history
+export PYTHONSTARTUP=~/projects/dotfiles/.pythonrc.py
