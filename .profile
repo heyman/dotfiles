@@ -2,7 +2,7 @@
 alias ls="ls -Gl"
 
 # path
-export PATH=/usr/local/Cellar/python/2.7.1/bin:/Users/jonatan/.gem/ruby/1.8/bin:/Developer/usr/bin:$PATH
+export PATH=/usr/local/Cellar/python/2.7.1/bin:/Users/jonatan/.gem/ruby/1.8/bin:/Developer/usr/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH
 
 # git bash completion
 source ~/misc/git-completion.bash
