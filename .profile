@@ -35,5 +35,8 @@ export PYTHON=python
 # django manage command shortcut
 alias pm="python manage.py"
 
+# heroku client alias
+alias h="heroku"
+
 # set up better python history
 export PYTHONSTARTUP=~/projects/dotfiles/.pythonrc.py
