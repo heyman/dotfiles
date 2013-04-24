@@ -34,6 +34,7 @@ export PYTHON=python
 
 # django manage command shortcut
 alias pm="python manage.py"
+alias pms="python manage.py shell_plus --use-pythonrc"
 
 # heroku client alias
 alias h="heroku"
