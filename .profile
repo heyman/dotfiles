@@ -2,10 +2,10 @@
 alias ls="ls -Gl"
 
 # path
-export PATH=/usr/local/Cellar/python/2.7.1/bin:/Users/jonatan/.gem/ruby/1.8/bin:/Developer/usr/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 # git bash completion
-source ~/misc/git-completion.bash
+source ~/projects/dotfiles/misc/git-completion.bash
 
 # fix terminal prompt
 # \d – Current date
@@ -20,6 +20,7 @@ export PS1='\w $(__git_ps1 "(%s) ")§ '
 
 # virtualenv wrapper
 export WORKON_HOME=~/virtualenvs
+export PROJECT_HOME=~/projects
 source virtualenvwrapper.sh
 
 # git
@@ -42,5 +43,5 @@ alias h="heroku"
 # set up better python history
 export PYTHONSTARTUP=~/projects/dotfiles/.pythonrc.py
 
-# Ruby RVM (copied from .bash_profile)
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+## Ruby RVM (copied from .bash_profile)
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
