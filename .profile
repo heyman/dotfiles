@@ -4,6 +4,9 @@ alias ls="ls -Gl"
 # path
 export PATH=/usr/local/bin:$PATH
 
+# add ruby bin path to PATH
+export PATH=$(brew --prefix ruby)/bin:$PATH
+
 # git bash completion
 source ~/projects/dotfiles/misc/git-completion.bash
 
