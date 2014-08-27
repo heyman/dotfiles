@@ -48,3 +48,9 @@ export PYTHONSTARTUP=~/projects/dotfiles/.pythonrc.py
 
 ## Ruby RVM (copied from .bash_profile)
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Ruby rbenv
+eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
