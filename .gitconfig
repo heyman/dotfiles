@@ -7,3 +7,5 @@
 	branch = auto
 [core]
 	excludesfile = ~/.gitignore
+[push]
+	default = simple
