@@ -21,3 +21,6 @@ def setup_history():
   atexit.register(save_history)
 setup_history()
 del setup_history
+
+# Import datetime and date
+from datetime import datetime, date
