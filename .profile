@@ -7,6 +7,9 @@ export PATH=/usr/local/bin:$PATH
 # add ruby bin path to PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
 
+# add GNU gettext, installed through homebrew, to PATH (for Django translations management commands to work)
+export PATH=$PATH:/usr/local/Cellar/gettext/0.19.2/bin/
+
 # git bash completion
 source ~/projects/dotfiles/misc/git-completion.bash
 
