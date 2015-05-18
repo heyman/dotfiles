@@ -23,4 +23,4 @@ setup_history()
 del setup_history
 
 # Import datetime and date
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
