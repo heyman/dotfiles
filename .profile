@@ -57,3 +57,27 @@ eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Change Terminal background when SSH:ing
+ssh(){
+    #!/bin/sh
+
+    HOSTNAME=`echo $@ | sed s/.*@//`
+
+    set_bg () {
+      osascript -e "tell application \"Terminal\" to set background color of window 1 to $1"
+    }
+
+    on_exit () {
+      set_bg "{0, 0, 0, 50000}"
+    }
+    #trap on_exit EXIT
+
+    case $HOSTNAME in
+      production1|production2|production3) set_bg "{45000, 0, 0, 50000}" ;;
+      *) set_bg "{0, 0, 15000, 50000}" ;;
+    esac
+
+    /usr/bin/ssh "$@"
+    on_exit;
+}
