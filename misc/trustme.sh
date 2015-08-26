@@ -11,6 +11,6 @@ fi
         echo ; 
         cat "$pubkey";
         echo ;
-) | ssh "$1" "(mkdir -p .ssh ; cat >> .ssh/authorized_keys ; chmod 600 .ssh ; chmod 600 .ssh/authorized_keys)"
+) | ssh "$1" "(mkdir -p .ssh ; cat >> .ssh/authorized_keys ; chmod 700 .ssh ; chmod 600 .ssh/authorized_keys)"
 
 #ssh "$1" "cat >> .ssh/authorized_keys"
