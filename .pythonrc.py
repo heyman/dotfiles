@@ -12,7 +12,7 @@ def setup_history():
 
   def save_history(history_path=history_path):
       import readline
-      readline.set_history_length(5000)
+      readline.set_history_length(10000)
       readline.write_history_file(history_path)
 
   if os.path.exists(history_path):
