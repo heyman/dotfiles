@@ -8,7 +8,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
 
 # add GNU gettext, installed through homebrew, to PATH (for Django translations management commands to work)
-export PATH=$PATH:/usr/local/Cellar/gettext/0.19.2/bin/
+#export PATH=$PATH:/usr/local/Cellar/gettext/0.19.2/bin/
 
 # add PostgreSQL bin dir to path
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
@@ -46,20 +46,24 @@ export PYTHON=python
 alias pm="python manage.py"
 alias pms="python manage.py shell_plus --use-pythonrc"
 
-# heroku client alias
-alias h="heroku"
+## heroku client alias
+#alias h="heroku"
 
 # set up better python history
 export PYTHONSTARTUP=~/projects/dotfiles/.pythonrc.py
+
+# bash-completion (required by docker completion scripts)
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# Docker bash completion
+source /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
+
 
 ## Ruby RVM (copied from .bash_profile)
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Ruby rbenv
 eval "$(rbenv init -)"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 
 source ~/projects/dotfiles/terminal-bg.sh
