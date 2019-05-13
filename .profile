@@ -8,7 +8,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
 
 # add GNU gettext, installed through homebrew, to PATH (for Django translations management commands to work)
-#export PATH=$PATH:/usr/local/Cellar/gettext/0.19.2/bin/
+export PATH=$PATH:/usr/local/opt/gettext/bin
 
 # add PostgreSQL bin dir to path
 #export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
