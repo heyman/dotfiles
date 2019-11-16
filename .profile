@@ -27,20 +27,12 @@ source ~/projects/dotfiles/misc/git-completion.bash
 # $(__git_ps1 " (%s)") - Current git branch/state (in parethensis)
 export PS1='\w $(__git_ps1 "(%s) ")§ '
 
-# virtualenv wrapper
-export WORKON_HOME=~/virtualenvs
-export PROJECT_HOME=~/projects
-source virtualenvwrapper.sh
-
 # git
 export GIT_EDITOR=emacs
 
 # fix problems with setuptools, and other python stuff, together with OSX terminal
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# python commands (for tripbirds makefiles)
-export PYTHON=python
 
 # django manage command shortcut
 alias pm="python manage.py"
@@ -67,6 +59,14 @@ eval "$(rbenv init -)"
 
 # Pyenv
 eval "$(pyenv init -)"
+
+# virtualenv wrapper
+export WORKON_HOME=~/virtualenvs
+export PROJECT_HOME=~/projects
+#source virtualenvwrapper.sh
+#export VIRTUALENVWRAPPER_PYTHON=$(pyenv which python)
+#export VIRTUALENVWRAPPER_VIRTUALENV=$(pyenv which virtualenv)
+pyenv virtualenvwrapper
 
 source ~/projects/dotfiles/terminal-bg.sh
 
