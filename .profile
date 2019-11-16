@@ -65,6 +65,8 @@ source /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
 # Ruby rbenv
 eval "$(rbenv init -)"
 
+# Pyenv
+eval "$(pyenv init -)"
 
 source ~/projects/dotfiles/terminal-bg.sh
 
