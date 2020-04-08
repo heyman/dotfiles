@@ -1,6 +1,7 @@
 [user]
 	name = Jonatan Heyman
 	email = jonatan@heyman.info
+	signingkey = 5CE0D506D829AA07
 [color]
 	diff = auto
 	status = auto
