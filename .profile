@@ -77,3 +77,6 @@ export NVM_DIR="/Users/heyman/.nvm"
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Fix for GPG signing of Git commits
+export GPG_TTY=$(tty)
