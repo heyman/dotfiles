@@ -19,7 +19,6 @@ source ~/projects/dotfiles/misc/git-completion.bash
 # Aliases
 alias ls='ls -Gl'
 alias ..='cd ..'
-alias ...='cd ../..'
 # django manage command shortcut
 alias pm="python manage.py"
 alias pms="python manage.py shell_plus --use-pythonrc"
