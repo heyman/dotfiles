@@ -27,6 +27,12 @@ alias pms="python manage.py shell_plus --use-pythonrc"
 # set up better python history
 export PYTHONSTARTUP=~/projects/dotfiles/.pythonrc.py
 
+# allow comments using `#` directly in terminal
+set -k
+
+# custom background when SSH:ing or fab:ing
+source ~/projects/dotfiles/terminal-bg.sh
+
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
