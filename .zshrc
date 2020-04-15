@@ -12,6 +12,10 @@ fi
 # initialize powerlevel10k
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
+# git bash completion
+autoload -U compinit && compinit # <-- needed for git-completion script to work on zsh
+source ~/projects/dotfiles/misc/git-completion.bash
+
 # Aliases
 alias ls='ls -Gl'
 alias ..='cd ..'
