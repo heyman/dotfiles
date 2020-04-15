@@ -12,8 +12,10 @@ fi
 # initialize powerlevel10k
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
-# better ls
-alias ls="ls -Gl"
+# Aliases
+alias ls='ls -Gl'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 # set up better python history
 export PYTHONSTARTUP=~/projects/dotfiles/.pythonrc.py
