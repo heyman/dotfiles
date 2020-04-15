@@ -19,7 +19,8 @@ source ~/projects/dotfiles/misc/git-completion.bash
 # Aliases
 alias ls='ls -Gl'
 alias ..='cd ..'
-# django manage command shortcut
+
+# django manage command shortcuts
 alias pm="python manage.py"
 alias pms="python manage.py shell_plus --use-pythonrc"
 
@@ -28,6 +29,11 @@ export PYTHONSTARTUP=~/projects/dotfiles/.pythonrc.py
 
 # allow comments using `#` directly in terminal
 set -k
+
+# Make Option+Left, Option+Right, Option+Backspace keys not jump over or kill whole 
+# paths /such/as/this, but instead stop at each forward slash
+# More info here: https://unix.stackexchange.com/questions/258656/how-can-i-delete-to-a-slash-or-a-word-in-zsh
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # <-- NO SLASH here
 
 # custom background when SSH:ing or fab:ing
 source ~/projects/dotfiles/terminal-bg.sh
