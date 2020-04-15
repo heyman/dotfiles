@@ -38,10 +38,14 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # <-- NO SLASH here
 # custom background when SSH:ing or fab:ing
 source ~/projects/dotfiles/terminal-bg.sh
 
+# rbenv
+eval "$(rbenv init -)"
+
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
 # pyenv virtualenv wrapper
 export WORKON_HOME=~/virtualenvs
 export PROJECT_HOME=~/projects
