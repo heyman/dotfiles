@@ -26,7 +26,7 @@ ssh(){
 # Change Terminal background when fab:ing
 fab(){
     #!/bin/sh
-    FABEXEC=`which fab`
+    FABEXEC=`whence -p fab`
 
     set_theme () {
       echo -e "\033]50;SetProfile=$1\a"
