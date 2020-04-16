@@ -16,6 +16,9 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 autoload -U compinit && compinit # <-- needed for git-completion script to work on zsh
 source ~/projects/dotfiles/misc/git-completion.bash
 
+# Set tab title to last part of $CWD in iterm2
+precmd() { eval 'echo -ne "\033]0;${PWD##*/}\007"' }
+
 # Aliases
 alias ls='ls -Gl'
 alias ..='cd ..'
