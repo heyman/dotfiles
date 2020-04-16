@@ -1,4 +1,3 @@
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -16,8 +15,22 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 autoload -U compinit && compinit # <-- needed for git-completion script to work on zsh
 source ~/projects/dotfiles/misc/git-completion.bash
 
-# Set tab title to last part of $CWD in iterm2
-precmd() { eval 'echo -ne "\033]0;${PWD##*/}\007"' }
+
+# precmd() function that preserves any existing precmds
+# -----------------
+precmd_hook() {
+  # Set tab title to last part of $CWD in iterm2
+  eval 'echo -ne "\033]0;${PWD##*/}\007"'
+  
+  # Activate virtualenv if no virtualenv in activated and .venv file exists
+  if (( !${+VIRTUAL_ENV} )) && [[ -f .venv ]] then
+    workon `cat .venv`;
+  fi
+}
+[[ -z $precmd_functions ]] && precmd_functions=()
+precmd_functions=($precmd_functions precmd_hook)
+# -----------------
+
 
 # Aliases
 alias ls='ls -Gl'
