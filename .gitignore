@@ -1,7 +1,8 @@
 *.wpr
 *.wpu
 .DS_Store
+__pycache__
 .pyhistory
 .ruby-version
 .python-version
-__pycache__
+.venv
