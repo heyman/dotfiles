@@ -4,7 +4,7 @@
 ssh(){
     #!/bin/sh
 
-    HOSTNAME=`echo $@ | sed s/.*@//`
+    HOSTNAME=`echo $@ | sed 's/.*@//'`
 
     set_theme () {
       echo -e "\033]50;SetProfile=$1\a"
