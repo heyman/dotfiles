@@ -22,7 +22,7 @@ precmd_hook() {
   # Set tab title to last part of $CWD in iterm2
   eval 'echo -ne "\033]0;${PWD##*/}\007"'
   
-  # Activate virtualenv if no virtualenv in activated and .venv file exists
+  # Activate virtualenv if no virtualenv is active and .venv file exists
   if (( !${+VIRTUAL_ENV} )) && [[ -f .venv ]] then
     workon `cat .venv`;
   fi
