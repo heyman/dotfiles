@@ -37,7 +37,8 @@ precmd_functions=($precmd_functions precmd_hook)
 alias ls='ls -Gl'
 alias ..='cd ..'
 
-# django manage command shortcuts
+# python/django command shortcuts
+alias pt="python -m unittest"
 alias pm="python manage.py"
 alias pms="python manage.py shell_plus --use-pythonrc"
 
