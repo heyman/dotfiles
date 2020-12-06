@@ -80,3 +80,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Fix for GPG signing of Git commits
 export GPG_TTY=$(tty)
+
+# Set JAVA_HOME
+[ -s "/usr/libexec/java_homez" ] && export JAVA_HOME=$(/usr/libexec/java_home)
