@@ -76,3 +76,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # java
 [ -s "/usr/libexec/java_home" ] && export JAVA_HOME=$(/usr/libexec/java_home)
+# Android SDK
+[ -s "/usr/local/share/android-sdk" ] && export ANDROID_HOME=/usr/local/share/android-sdk
