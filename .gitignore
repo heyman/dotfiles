@@ -6,3 +6,4 @@ __pycache__
 .ruby-version
 .python-version
 .venv
+.sass-cache
