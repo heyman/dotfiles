@@ -74,7 +74,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# java
-[ -s "/usr/libexec/java_home" ] && export JAVA_HOME=$(/usr/libexec/java_home)
+# Java / Android
+[ -s "/usr/libexec/java_home" ] && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # Android SDK
 [ -s "/usr/local/share/android-sdk" ] && export ANDROID_HOME=/usr/local/share/android-sdk
+
+###-tns-completion-start-###
+if [ -f /Users/heyman/.tnsrc ]; then 
+    source /Users/heyman/.tnsrc 
+fi
+###-tns-completion-end-###
