@@ -77,7 +77,8 @@ export NVM_DIR="$HOME/.nvm"
 # Java / Android
 [ -s "/usr/libexec/java_home" ] && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # Android SDK
-[ -s "/usr/local/share/android-sdk" ] && export ANDROID_HOME=/usr/local/share/android-sdk
+[ -s "/Users/heyman/Library/Android/sdk" ] && export ANDROID_HOME=/Users/heyman/Library/Android/sdk
+[ -s "/Users/heyman/Library/Android/sdk" ] && export ANDROID_SDK_ROOT=/Users/heyman/Library/Android/sdk
 
 ###-tns-completion-start-###
 if [ -f /Users/heyman/.tnsrc ]; then 
