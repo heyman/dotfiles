@@ -9,3 +9,4 @@ __pycache__
 .sass-cache
 *.code-workspace
 .vscode
+.nvmrc
