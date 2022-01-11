@@ -75,7 +75,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Java / Android
-[ -s "/usr/libexec/java_home" ] && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+[ -s "/usr/libexec/java_home" ] && export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 # Android SDK
 [ -s "/Users/heyman/Library/Android/sdk" ] && export ANDROID_HOME=/Users/heyman/Library/Android/sdk
 [ -s "/Users/heyman/Library/Android/sdk" ] && export ANDROID_SDK_ROOT=/Users/heyman/Library/Android/sdk
