@@ -1,10 +1,14 @@
 def setup_history():
     import atexit
     import os
-    import readline
     import rlcompleter
     import sys
     import subprocess
+
+    try:
+        import gnureadline as readline
+    except ImportError:
+        import readline
 
     # change autocomplete to tab
     readline.parse_and_bind("tab: complete")
