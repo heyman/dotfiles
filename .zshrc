@@ -51,7 +51,11 @@ set -k
 # Make Option+Left, Option+Right, Option+Backspace keys not jump over or kill whole 
 # paths /such/as/this, but instead stop at each forward slash
 # More info here: https://unix.stackexchange.com/questions/258656/how-can-i-delete-to-a-slash-or-a-word-in-zsh
-WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # <-- NO SLASH here
+#WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # <-- NO SLASH here
+
+# zsh seems to have OK defaults if no WORDCHARS is specified, but if we DO
+# specify them like above, it doesn't work
+WORDCHARS=''
 
 # custom background when SSH:ing or fab:ing
 source ~/projects/dotfiles/terminal-bg.sh
