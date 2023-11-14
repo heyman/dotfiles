@@ -60,13 +60,27 @@ WORDCHARS=''
 # custom background when SSH:ing or fab:ing
 source ~/projects/dotfiles/terminal-bg.sh
 
+# Homebrew (arm64) path
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Homebrew x64 alias
+alias brew64=/usr/local/bin/brew
+
+# Set DYLD_FALLBACK_LIBRARY_PATH to make python function ctypes.util.find_library() find Homebrew libraries
+# See: https://stackoverflow.com/a/3172515/27406
+# And: https://stackoverflow.com/a/75048449/27406
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
+
 # rbenv
 eval "$(rbenv init -)"
 
 # pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # pyenv virtualenv wrapper
 export WORKON_HOME=~/virtualenvs
