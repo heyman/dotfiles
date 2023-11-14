@@ -25,18 +25,20 @@ ssh(){
 
 # Change Terminal background when fab:ing
 fab(){
-    #!/bin/sh
-    FABEXEC=`whence -p fab`
+  #!/bin/sh
+  FABEXEC=`whence -p fab`
 
-    set_theme () {
-      echo -e "\033]50;SetProfile=$1\a"
-    }
+  set_theme () {
+    echo -e "\033]50;SetProfile=$1\a"
+  }
 
-    on_exit () {
-      set_theme "Jonatan"
-    }
+  on_exit () {
+    set_theme "Jonatan"
+  }
 
-    set_theme "Fab"
-    $FABEXEC "$@"
-    on_exit;
+  set_theme "Fab"
+  $FABEXEC "$@"
+  EXIT_CODE=$?
+  on_exit;
+  return $EXIT_CODE
 }
