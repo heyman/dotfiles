@@ -71,6 +71,10 @@ alias brew64=/usr/local/bin/brew
 # And: https://stackoverflow.com/a/75048449/27406
 export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
 
+# Set custom env var to be able to do a tricky workaround for MacOS SIP shenanigans
+# See: https://briandfoy.github.io/macos-s-system-integrity-protection-sanitizes-your-environment/
+export MY_DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH
+
 # rbenv
 eval "$(rbenv init -)"
 
