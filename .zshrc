@@ -75,6 +75,10 @@ export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
 # See: https://briandfoy.github.io/macos-s-system-integrity-protection-sanitizes-your-environment/
 export MY_DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH
 
+
+# initialize atuin
+eval "$(atuin init zsh --disable-up-arrow)"
+
 # rbenv
 eval "$(rbenv init -)"
 
