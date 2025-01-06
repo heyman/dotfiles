@@ -111,3 +111,6 @@ if [ -f /Users/heyman/.tnsrc ]; then
     source /Users/heyman/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+# gcm - git commit message through LLM
+source ~/projects/dotfiles/gcm.zsh
