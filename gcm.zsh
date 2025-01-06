@@ -11,7 +11,9 @@ gcm() {
     # Function to generate commit message
     generate_commit_message() {
         git diff --cached | llm -m claude-3.5-sonnet "
-Write concise, informative commit messages: Start with a summary in imperative mood, explain the 'why' behind changes, use bullet points for multiple changes, avoid using the word refactor, instead explain what was done. What you write will be passed to git commit -m \"[message]\"
+Write concise, informative commit messages: Start with a summary in imperative mood, explain the 'why' behind changes, 
+use bullet points for multiple changes. A single line is perfectly fine for small changes. Reply with JUST the commit 
+message and nothing else. What you write will be passed to git commit -m \"[message]\".
 
 Below is a diff of all staged changes, coming from the command:
 
