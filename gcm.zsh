@@ -8,12 +8,18 @@
 # the `llm` CLI util is awesome, can get it here: https://llm.datasette.io/en/stable/
 
 gcm() {
+    # Check if there are any staged changes
+    if [ -z "$(git diff --cached --name-only)" ]; then
+        echo "No staged changes found. Please stage your changes before committing."
+        return 1
+    fi
+
     # Function to generate commit message
     generate_commit_message() {
-        git diff --cached | llm -m claude-3.5-sonnet "
-Write concise, informative commit messages: Start with a summary in imperative mood, explain the 'why' behind changes, 
+        git diff --cached | llm -m gpt-4o -s "
+Write a short and concise commit message: Start with a summary in imperative mood, explain the 'why' behind changes, 
 use bullet points for multiple changes. A single line is perfectly fine for small changes. Reply with JUST the commit 
-message and nothing else. What you write will be passed to git commit -m \"[message]\".
+message and nothing else. Your whole reply will be passed to git commit -m \"[message]\".
 
 Below is a diff of all staged changes, coming from the command:
 
