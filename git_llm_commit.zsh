@@ -10,14 +10,15 @@
 gcm() {
     # Function to generate commit message
     generate_commit_message() {
-        git diff --cached | llm "
+        git diff --cached | llm -m claude-3.5-sonnet "
+Write concise, informative commit messages: Start with a summary in imperative mood, explain the 'why' behind changes, use bullet points for multiple changes, avoid using the word refactor, instead explain what was done. What you write will be passed to git commit -m \"[message]\"
+
 Below is a diff of all staged changes, coming from the command:
 
 \`\`\`
 git diff --cached
 \`\`\`
-
-Please generate a concise, one-line commit message for these changes."
+"
     }
 
     # Function to read user input compatibly with both Bash and Zsh
