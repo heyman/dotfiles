@@ -114,3 +114,6 @@ fi
 
 # gcm - git commit message through LLM
 source ~/projects/dotfiles/gcm.zsh
+
+# Docker
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin"
